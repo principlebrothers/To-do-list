@@ -1,7 +1,65 @@
-.hello {
-  color: red;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: bisque;
+  background-color: #dddbdd;
+}
+
+.main-page {
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: #fff;
+  box-shadow: 2px 2px 2px 2px gray;
+  height: 100%;
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #dddbdd;
+  padding: 12px;
+}
+
+.header-text {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.input-container {
+  border-bottom: 2px solid #dddbdd;
+}
+
+#userInput {
+  padding: 12px;
+  margin: 12px 12px 12px 0px;
+  width: 100%;
+  border: none;
+  font-size: 18px;
+}
+
+/* Task Section */
+.task-container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #dddbdd;
+  padding: 16px;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.clearAll {
+  display: flex;
+  justify-content: center;
+  padding: 18px;
+  background-color: #E4E2E4;
+}
+
+.clear {
+  font-size: 20px;
 }
