@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import './style.css';
 
 const items = [
@@ -29,7 +28,7 @@ const createList = () => {
   const unorderedList = document.createElement('ul');
   unorderedList.classList.add('listItems');
   listContainer.appendChild(unorderedList);
-  
+
   items.forEach((task) => {
     const list = document.createElement('li');
     list.classList.add('list');

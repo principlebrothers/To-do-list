@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -35,7 +35,7 @@ body {
 
 #userInput {
   padding: 12px;
-  margin: 12px 12px 12px 0px;
+  margin: 12px 12px 12px 0;
   width: 100%;
   border: none;
   font-size: 18px;
@@ -57,7 +57,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 18px;
-  background-color: #E4E2E4;
+  background-color: #e4e2e4;
 }
 
 .clear {
