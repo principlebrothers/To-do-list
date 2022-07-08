@@ -5,13 +5,13 @@ import populateUI from './populateUI.js';
 
 const todoList = [];
 
-const renderUI = () => {
+const populateScreen = () => {
   if (!JSON.parse(localStorage.getItem('todo-list'))) {
     storage.storetask(storage.sortindex(todoList));
   }
   // Display List of tasks in UI
   populateUI.displayList();
-  
+
   // Set up checkbox event
   const checkboxes = document.querySelectorAll('.checkbox');
 
@@ -42,7 +42,7 @@ const renderUI = () => {
       storage.remove(event);
       const oldList = document.querySelectorAll('.todoItem');
       [...oldList].forEach((e) => e.remove());
-      renderUI();
+      populateScreen();
     });
   });
 };
@@ -55,7 +55,7 @@ input.addEventListener('keyup', (event) => {
     event.target.value = '';
     const oldList = document.querySelectorAll('.todoItem');
     [...oldList].forEach((e) => e.remove());
-    renderUI();
+    populateScreen();
   }
 });
 
@@ -66,7 +66,7 @@ btn.addEventListener('click', (e) => {
   storage.clearCompleted();
   const oldList = document.querySelectorAll('.todoItem');
   [...oldList].forEach((e) => e.remove());
-  renderUI();
+  populateScreen();
 });
 
-renderUI();
+populateScreen();
