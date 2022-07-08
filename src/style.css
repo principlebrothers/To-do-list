@@ -45,6 +45,8 @@ body {
 }
 
 .add-item input {
+  font-family: cursive;
+  font-style: oblique;
   border: 0;
   font-size: 18px;
   width: 100%;
@@ -89,6 +91,7 @@ input[type=checkbox] {
 }
 
 input.description {
+  font-size: 18px;
   width: 100%;
   border: 0;
 }
