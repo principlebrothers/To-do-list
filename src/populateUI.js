@@ -1,4 +1,4 @@
-import localstore from './localStorage.js';
+import storage from './localStorage.js';
 
 export default (() => {
   const addListItem = (item) => {
@@ -24,13 +24,13 @@ export default (() => {
     newItem.appendChild(newIcon);
     newItem.appendChild(newIconTrash);
 
-    const btn = document.querySelector('.btn');
-    const list = document.querySelector('#todo-list');
+    const btn = document.querySelector('.clearAll-btn');
+    const list = document.querySelector('#task-container');
     list.insertBefore(newItem, btn);
   };
   // Display List
   const displayList = () => {
-    const LocalStoragelist = localstore.getData();
+    const LocalStoragelist = storage.getData();
     LocalStoragelist.forEach((item) => {
       addListItem(item);
     });

@@ -17,7 +17,7 @@ body {
   padding: 16px;
 }
 
-#todo-list {
+#task-container {
   list-style: none;
   background-color: white;
   width: 500px;
@@ -27,30 +27,31 @@ body {
   box-shadow: rgba(100, 100, 120, 0.2) 0 5px 25px 0;
 }
 
-#todo-list li {
+#task-container li {
   border-bottom: 1px solid rgb(255, 255, 255);
   display: flex;
-  padding: 10px 15px 10px 10px;
-  color: rgb(92, 89, 89);
+  padding: 16px 15px 10px 16px;
+  color: #59595c;
+  border-bottom: 2px solid #dddbdd;
 }
 
-#todo-list li i {
+#task-container li i {
   margin-left: auto;
 }
 
-.head {
-  font-size: 18px;
+.head-text {
+  font-size: 24px;
   font-weight: 600;
 }
 
 .add-item input {
   border: 0;
-  font-style: italic;
+  font-size: 18px;
   width: 100%;
 }
 
 input:focus {
-  outline: none !important;
+  outline: none;
 }
 
 input[type=checkbox] {
@@ -67,20 +68,19 @@ input[type=checkbox] {
   color: black;
 }
 
-.btn {
+.clearAll-btn {
   background-color: #f6f6f6;
 }
 
-.btn a {
+.clearAll-btn a {
   text-align: center;
   color: black;
-  opacity: 0.5;
   text-decoration: none;
   width: 100%;
   padding: 10px 0;
 }
 
-.btn:hover {
+.clearAll-btn:hover {
   background-color: rgb(0, 0, 0, 0.3);
 }
 

@@ -1,16 +1,16 @@
 import './style.css';
-import localstore from './localStorage.js';
+import storage from './localStorage.js';
 import completed from './markCompletion.js';
-import displayhtml from './populateUI.js';
+import populateUI from './populateUI.js';
 
 const todoList = [];
 
 const renderUI = () => {
   if (!JSON.parse(localStorage.getItem('todo-list'))) {
-    localstore.storetask(localstore.sortindex(todoList));
+    storage.storetask(storage.sortindex(todoList));
   }
   // Display List of tasks in UI
-  displayhtml.displayList();
+  populateUI.displayList();
   // Event for Checkboxes
   const checkboxes = document.querySelectorAll('.checkbox');
 
@@ -20,7 +20,7 @@ const renderUI = () => {
   // Event for Update Task
   const inputs = document.querySelectorAll('.description');
   [...inputs].forEach((input) => {
-    input.addEventListener('focusout', localstore.updateTask);
+    input.addEventListener('focusout', storage.updateTask);
   });
   // Hide Ellipsis icon and display trash icon
   [...inputs].forEach((input) => {
@@ -35,7 +35,7 @@ const renderUI = () => {
   const trashes = document.querySelectorAll('.fa-trash');
   [...trashes].forEach((trash) => {
     trash.addEventListener('click', (event) => {
-      localstore.remove(event);
+      storage.remove(event);
       const oldList = document.querySelectorAll('.todoItem');
       [...oldList].forEach((e) => e.remove());
       renderUI();
@@ -46,7 +46,7 @@ const renderUI = () => {
 const input = document.querySelector('#additem');
 input.addEventListener('keyup', (event) => {
   if (event.keyCode === 13) { // Returns Enter Key
-    localstore.add(event);
+    storage.add(event);
     event.target.value = '';
     const oldList = document.querySelectorAll('.todoItem');
     [...oldList].forEach((e) => e.remove());
@@ -54,10 +54,10 @@ input.addEventListener('keyup', (event) => {
   }
 });
 // Remove Completed Tasks
-const btn = document.querySelector('.btn');
+const btn = document.querySelector('.clearAll-btn');
 btn.addEventListener('click', (e) => {
   e.preventDefault();
-  localstore.clearCompleted();
+  storage.clearCompleted();
   const oldList = document.querySelectorAll('.todoItem');
   [...oldList].forEach((e) => e.remove());
   renderUI();
