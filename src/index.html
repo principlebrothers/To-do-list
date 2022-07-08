@@ -8,19 +8,11 @@
 </head>
 <body>
     <section class="main-page">
-        <div class="header">
-            <h2 class="header-text">Today's To Do</h2>
-            <i class="fa-solid fa-arrows-rotate fa-icon"></i>
-        </div>
-        <div class="input-container">
-            <label for="userInput" class="userInput"></label>
-        <input name="userInput" id="userInput" placeholder="Add to your list.."/>
-        </div>
-        <div class="todo-container"></div>
-        <div class="clearAll">
-            <p class="clear">Clear all completed</p>
-        </div>
-        
+        <ul id="todo-list">
+            <li class="head">Today's To Do<i class="fa fa-refresh" aria-hidden="true"></i></li>
+            <li class="add-item"><input type="text" id="additem" placeholder="Add to your list ..."></li>
+            <li class="btn"><a href="#">Clear all Completed</a></li>
+          </ul>
     </section>
 </body>
 </html>
