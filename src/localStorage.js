@@ -1,6 +1,6 @@
 export default (() => {
   const sortindex = (todoList) => todoList.map((item, index) => {
-    item.index = index + 1;
+    item.index = index;
     return item;
   });
   // Store Tasks in Local Storage //
@@ -25,7 +25,6 @@ export default (() => {
     }, 200);
     const list = getData();
     let index = event.target.getAttribute('data-index');
-    index -= 1;
     list[index].description = event.target.value;
     storetask(list);
   };
@@ -33,9 +32,7 @@ export default (() => {
   const remove = (event) => {
     const list = getData();
     let index = event.target.getAttribute('data-index');
-    index -= 1;
     list.splice(index, 1);
-    index += 1;
     storetask(sortindex(list));
   };
   // Clear Completed tasks
