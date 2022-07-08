@@ -1,6 +1,6 @@
 export default (() => {
   const sortindex = (todoList) => todoList.map((item, index) => {
-    item.index = index + 1;
+    item.index = index;
     return item;
   });
   // Store Tasks in Local Storage //
@@ -24,18 +24,15 @@ export default (() => {
       event.target.nextSibling.classList.remove('hideellipsis');
     }, 200);
     const list = getData();
-    let index = event.target.getAttribute('data-index');
-    index -= 1;
+    const index = event.target.getAttribute('data-index');
     list[index].description = event.target.value;
     storetask(list);
   };
   // Remove Tasks
   const remove = (event) => {
     const list = getData();
-    let index = event.target.getAttribute('data-index');
-    index -= 1;
+    const index = event.target.getAttribute('data-index');
     list.splice(index, 1);
-    index += 1;
     storetask(sortindex(list));
   };
   // Clear Completed tasks
