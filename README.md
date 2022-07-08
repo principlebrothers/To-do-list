@@ -12,9 +12,9 @@ Kindly follow the steps below to install and access the code on your pc.
 
 - Clone this repository or download the Zip folder:
 
-  For HTTPS: **``https://github.com/principlebrothers/To-do-list.git``**
-  For SSH: **``git@github.com:principlebrothers/To-do-list.git``**
-  For GITHUB CLI: **``gh repo clone principlebrothers/To-do-list``**
+  - For HTTPS: **``https://github.com/principlebrothers/To-do-list.git``**
+  - For SSH: **``git@github.com:principlebrothers/To-do-list.git``**
+  - For GITHUB CLI: **``gh repo clone principlebrothers/To-do-list``**
 
 - Navigate to the location of the folder in your machine you want clone the repository to:
 
