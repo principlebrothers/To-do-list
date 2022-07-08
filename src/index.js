@@ -50,7 +50,7 @@ const populateScreen = () => {
 // Add Item in the list when user press enter after input
 const input = document.querySelector('#additem');
 input.addEventListener('keyup', (event) => {
-  if (event.keyCode === 13) { 
+  if (event.keyCode === 13) {
     storage.add(event);
     event.target.value = '';
     const oldList = document.querySelectorAll('.todoItem');
