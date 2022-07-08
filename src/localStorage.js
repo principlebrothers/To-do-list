@@ -24,14 +24,14 @@ export default (() => {
       event.target.nextSibling.classList.remove('hideellipsis');
     }, 200);
     const list = getData();
-    let index = event.target.getAttribute('data-index');
+    const index = event.target.getAttribute('data-index');
     list[index].description = event.target.value;
     storetask(list);
   };
   // Remove Tasks
   const remove = (event) => {
     const list = getData();
-    let index = event.target.getAttribute('data-index');
+    const index = event.target.getAttribute('data-index');
     list.splice(index, 1);
     storetask(sortindex(list));
   };
