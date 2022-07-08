@@ -8,10 +8,10 @@ export default (() => {
     localStorage.setItem('todo-list', JSON.stringify(todoList));
   };
 
-  const gettasks = () => JSON.parse(localStorage.getItem('todo-list'));
+  const getData = () => JSON.parse(localStorage.getItem('todo-list'));
   // Tasks in the list
   const add = (event) => {
-    const list = gettasks();
+    const list = getData();
     list.push({ description: event.target.value, completed: false, index: 0 });
     storetask(sortindex(list));
   };
@@ -23,21 +23,21 @@ export default (() => {
       event.target.nextSibling.nextSibling.classList.add('hideellipsis');
       event.target.nextSibling.classList.remove('hideellipsis');
     }, 200);
-    const list = gettasks();
+    const list = getData();
     const index = event.target.getAttribute('data-index');
     list[index].description = event.target.value;
     storetask(list);
   };
   // Remove Tasks
   const remove = (event) => {
-    const list = gettasks();
+    const list = getData();
     const index = event.target.getAttribute('data-index');
     list.splice(index, 1);
     storetask(sortindex(list));
   };
   // Clear Completed tasks
   const clearCompleted = () => {
-    const list = gettasks();
+    const list = getData();
     const newList = list.filter((e) => e.completed === false);
     storetask(sortindex(newList));
   };
@@ -45,7 +45,7 @@ export default (() => {
   return {
     sortindex,
     storetask,
-    gettasks,
+    getData,
     add,
     updateTask,
     remove,

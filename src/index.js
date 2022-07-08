@@ -1,7 +1,7 @@
 import './style.css';
-import localstore from './localstore.js';
-import completed from './completedtasks.js';
-import displayhtml from './displayhtml.js';
+import localstore from './localStorage.js';
+import completed from './markCompletion.js';
+import displayhtml from './populateUI.js';
 
 const todoList = [];
 

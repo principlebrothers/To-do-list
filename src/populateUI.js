@@ -30,7 +30,7 @@ export default (() => {
   };
   // Display List
   const displayList = () => {
-    const LocalStoragelist = localstore.gettasks();
+    const LocalStoragelist = localstore.getData();
     LocalStoragelist.forEach((item) => {
       addListItem(item);
     });
