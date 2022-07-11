@@ -35,7 +35,7 @@ Kindly follow the steps below to install and access the code on your pc.
 > JavaScript
 
 ## Live Demo
-[live link](https://principlebrothers.github.io/To-do-list/)
+[Live link](https://principlebrothers.github.io/To-do-list/)
 
 
 ## Authors
